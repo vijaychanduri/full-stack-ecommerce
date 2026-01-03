@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 // Database Connection With MongoDB
-mongoose.connect("mongodb+srv://vijaychakali:vijay123@cluster0.5olllbh.mongodb.net/e-commerce");
+mongoose.connect("mongodb+srv://<db_username>:<db_password>@cluster0.5olllbh.mongodb.net/e-commerce");
 
 // paste your mongoDB Connection string above with password
 // password should not contain '@' special character
@@ -244,4 +244,5 @@ app.post("/removeproduct", async (req, res) => {
 app.listen(port, (error) => {
   if (!error) console.log("Server Running on port " + port);
   else console.log("Error : ", error);
+
 });
